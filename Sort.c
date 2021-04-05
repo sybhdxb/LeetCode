@@ -16,6 +16,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+
+//1.
 #define SWOP(a, b) ((a) += (b), (b) = (a) - (b), (a) -= (b))
 #define W(a, b) ((a) = (a) + (b) - ((b) = (a)))
 
@@ -45,6 +47,7 @@ void BubbleSort(int *nums1, int nums1Size)
     }
 }
 
+//2.
 int cmp_int(int *a, int *b)
 {
     // return *a - *b; //Up
@@ -55,6 +58,44 @@ void Quicksort(int *nums1, int nums1Size)
 {
     qsort(nums1, nums1Size, sizeof(int), cmp_int);
 }
+
+//3.The two arrays must be ordered
+void merge3(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
+{
+    int p1 = 0, p2 = 0;
+    // int sorted[m + n];
+    int *sorted = (int *)malloc(nums1Size * 4);
+    int cur;
+    while (p1 < m || p2 < n)
+    {
+        if (p1 == m)
+        {
+            cur = nums2[p2++];
+        }
+        else if (p2 == n)
+        {
+            cur = nums1[p1++];
+        }
+        else if (nums1[p1] < nums2[p2])
+        {
+            cur = nums1[p1++];
+        }
+        else
+        {
+            cur = nums2[p2++];
+        }
+        *sorted++ = cur;
+    }
+    sorted -= (m + n);
+    int i = 0;
+    for (; i != m + n; ++i)
+    {
+        nums1[i] = sorted[i];
+    }
+    free(sorted);
+}
+
+
 
 int main(void)
 {

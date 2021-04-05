@@ -12,7 +12,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <malloc.h>
 
+//1.
 #define SWOP(a, b) ((a) += (b), (b) = (a) - (b), (a) -= (b))
 #define W(a, b) ((a) = (a) + (b) - ((b) = (a)))
 
@@ -42,7 +44,7 @@ void BubbleSort(int *nums1, int nums1Size)
     }
 }
 
-void merge(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
+void merge1(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
 {
     if (nums1Size < m || nums2Size < n || nums1Size < m + n)
         return;
@@ -57,13 +59,14 @@ void merge(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
     BubbleSort(nums1, n + m);
 }
 
+//2.
 int cmp(int *a, int *b)
 {
     // return *a - *b; //Up
     return *b - *a; //Dowm
 }
 
-void merge1(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
+void merge2(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
 {
     int i = 0;
     for (; i != n; ++i)
@@ -73,12 +76,68 @@ void merge1(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
     qsort(nums1, nums1Size, sizeof(int), cmp);
 }
 
+//3.The two arrays must be ordered，Double pointer
+void merge3(int *nums1, int nums1Size, int m, int *nums2, int nums2Size, int n)
+{
+    int p1 = 0, p2 = 0;
+    // int sorted[m + n];
+    int *sorted = (int *)malloc(nums1Size * 4);
+    int cur;
+    while (p1 < m || p2 < n)
+    {
+        if (p1 == m)
+        {
+            cur = nums2[p2++];
+        }
+        else if (p2 == n)
+        {
+            cur = nums1[p1++];
+        }
+        else if (nums1[p1] < nums2[p2])
+        {
+            cur = nums1[p1++];
+        }
+        else
+        {
+            cur = nums2[p2++];
+        }
+        *sorted++ = cur;
+    }
+    sorted -= (m + n);
+    int i = 0;
+    for (; i != m + n; ++i)
+    {
+        nums1[i] = sorted[i];
+    }
+    free(sorted);
+}
+
+//4.Reverse double pointer
+void merge4(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
+    int p1 = m - 1, p2 = n - 1;
+    int tail = m + n - 1;
+    int cur;
+    while (p1 >= 0 || p2 >= 0) {
+        if (p1 == -1) {
+            cur = nums2[p2--];
+        } else if (p2 == -1) {
+            cur = nums1[p1--];
+        } else if (nums1[p1] > nums2[p2]) {
+            cur = nums1[p1--];
+        } else {
+            cur = nums2[p2--];
+        }
+        nums1[tail--] = cur;
+    }
+}
+
+
+
 int main(void)
 {
-    int array1[] = {100, 9, 20, 3, 88, 5, 3, 3, 3};
-    int array2[] = {2, 0, 0, 5, 6};
-    // merge(array1, 9, 6, array2, 5, 3);
-    merge1(array1, 9, 6, array2, 5, 3);
+    int array1[] = {1, 3, 4, 4, 10, 15, 23, 23, 33};
+    int array2[] = {0, 0, 2, 5, 6};
+    merge4(array1, 9, 6, array2, 5, 3);
     int i = 0;
     for (; i < 9; i++)
     {
