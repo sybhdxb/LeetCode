@@ -14,7 +14,7 @@ double R_rad(double s)
 	return (double)(s * 180.0 / PI);
 }
 
-// return m
+// return meter
 double GetDistance(double lat1, double lng1, double lat2, double lng2)
 {
 	double radLat1 = rad(lat1);
