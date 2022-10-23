@@ -1,11 +1,7 @@
 /*
  * @Author: sybhdxb
  * @Date: 2021-10-22 15:19:13
-<<<<<<< HEAD
- * @LastEditTime: 2021-10-22 16:43:53
-=======
  * @LastEditTime: 2021-10-22 16:39:27
->>>>>>> 0fd2b6cacdc6bcce8abb78f22df5a39175e052d6
  * @LastEditors: sybhdxb
  * @Description: 
  * @FilePath: \LeetCode\27.c
