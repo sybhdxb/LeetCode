@@ -23,6 +23,7 @@
 |     1603. 设计停车系统     |      |                                                                       |
 |    1768. 交替合并字符串    | 简单 |        https://leetcode.cn/problems/merge-strings-alternately/        |
 |       915. 分割数组        | 中等 | https://leetcode.cn/problems/partition-array-into-disjoint-intervals/ |
+|       934. 最短的桥        | 中等 |             https://leetcode.cn/problems/shortest-bridge/             |
 
 > Array2ListNode 数组转链表
 
