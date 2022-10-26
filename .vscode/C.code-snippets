@@ -1,0 +1,122 @@
+{
+	// Place your LeetCode 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"int main(int argc, char *argv[])" :{
+		"prefix": "im",
+		"body": [
+		"int main(int argc, char *argv[])",
+		"{",
+		"\t$1",
+		"\treturn 0;",
+		"}"
+		],
+		"description": "main函数"
+	},
+	
+	"头文件防止重复包含": {
+			"prefix": "#inf",
+			"body": [
+				"#ifndef _${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H_",
+				"#define _${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H_",
+				"", "$1", "", "", "", "", "", "", "", "",				
+				"#endif"
+			],
+			"description": "头文件防止重复包含"
+
+	},
+
+	"new c" : {
+		"prefix": "#New C",
+		"body": [
+			"/**",
+			"******************************************************************************",
+			"* @file    $TM_FILENAME",
+			"* @author  Howard",
+			"* @version V1.0",
+			"* @date    $CURRENT_YEAR.$CURRENT_MONTH.$CURRENT_DATE",
+			"* @brief   ",
+			"******************************************************************************",
+			"*/",
+			"",
+			"/* Includes ------------------------------------------------------------------*/",
+			"#include <stdio.h>",
+			"#include <string.h>",
+			"#include <stdlib.h>",
+			"#include <math.h>",
+			"#include <stdbool.h>",
+			"",
+			"",
+			"int main(int argc, char *argv[])",
+			"{",
+			"",
+			"\tsystem(\"pause\");",
+			"\treturn 0;",
+			"}",
+		],
+		"description": "新建C"
+	},
+	"new c++" : {
+		"prefix": "#New C++",
+		"body": [
+			"/**",
+			"******************************************************************************",
+			"* @file    $TM_FILENAME",
+			"* @author  Howard",
+			"* @version V1.0",
+			"* @date    $CURRENT_YEAR.$CURRENT_MONTH.$CURRENT_DATE",
+			"* @brief   ",
+			"******************************************************************************",
+			"*/",
+			"",
+			"/* Includes ------------------------------------------------------------------*/",
+			"#include <iostream>",
+			"#include <vector>",
+			"",
+			"using namespace std;",
+			"",
+			"int main(int argc, char *argv[])",
+			"{",
+			"",
+			"\treturn 0;",
+			"}",
+		],
+		"description": "新建C++"
+	},
+	
+	"for(auto &value : continer)" :{
+		"prefix": "forr",
+		"body": [
+			"for(auto &${1:value} : ${2:continer})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "for(auto &value : continer)"
+	},
+
+	"返回值判断if" : {
+		"prefix": "ie",  //if error
+		"body": [
+			"if(${1:ret} ${2|< 0,> 0,== 0,== nullptr, != nullptr|})",
+			"{",
+			"\t${3|printf,fprintf|}(\"$4\");$0",
+			"}"
+		],
+		"description": "返回值判断"
+	},
+
+}
