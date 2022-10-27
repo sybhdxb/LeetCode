@@ -91,6 +91,7 @@
 			"int main(int argc, char *argv[])",
 			"{",
 			"",
+			"\tsystem(\"pause\");",
 			"\treturn 0;",
 			"}",
 		],
