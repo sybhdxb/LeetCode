@@ -26,6 +26,7 @@
 |        934. 最短的桥         | 中等  |             https://leetcode.cn/problems/shortest-bridge/             |
 | 862. 和至少为 K 的最短子数组 | 困难  |  https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/  |
 |    1822. 数组元素积的符号    | 简单  |     https://leetcode.cn/problems/sign-of-the-product-of-an-array/     |
+|   907. 子数组的最小值之和    | 简单  |        https://leetcode.cn/problems/sum-of-subarray-minimums/         |
 
 > Array2ListNode 数组转链表
 
