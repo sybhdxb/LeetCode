@@ -9,12 +9,13 @@
 -->
 
 # LeetCode
-**由vscode插件LeetCode创建用例，并测试通过的试题**
+
+**由 vscode 插件 LeetCode 创建用例，并测试通过的试题**
 
 # 刷题顺序
-> 目前LeetCode题量很大，怎么刷比较好？
-> https://www.zhihu.com/question/268425862/answer/2853273199
 
+> 目前 LeetCode 题量很大，怎么刷比较好？
+> https://www.zhihu.com/question/268425862/answer/2853273199
 
 |             题目             | 难度 |                                 链接                                  |
 | :--------------------------: | :--: | :-------------------------------------------------------------------: |
@@ -27,6 +28,7 @@
 |     201. 数字范围按位与      |      |                                                                       |
 |        206. 反转链表         |      |                                                                       |
 |    485. 最大连续 1 的个数    | 简单 |    https://leetcode.cn/problems/max-consecutive-ones/description/     |
+|        495. 提莫攻击         | 简单 |             https://leetcode.cn/problems/teemo-attacking/             |
 |      1603. 设计停车系统      |      |                                                                       |
 |     1768. 交替合并字符串     | 简单 |        https://leetcode.cn/problems/merge-strings-alternately/        |
 |        915. 分割数组         | 中等 | https://leetcode.cn/problems/partition-array-into-disjoint-intervals/ |
@@ -38,5 +40,3 @@
 > Array2ListNode 数组转链表
 
 > Sort 排序
-
-
