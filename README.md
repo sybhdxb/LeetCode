@@ -36,6 +36,8 @@
 | 862. 和至少为 K 的最短子数组 | 困难 |  https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/  |
 |    1822. 数组元素积的符号    | 简单 |     https://leetcode.cn/problems/sign-of-the-product-of-an-array/     |
 |   907. 子数组的最小值之和    | 简单 |        https://leetcode.cn/problems/sum-of-subarray-minimums/         |
+|   236. 二叉树的最近公共祖先   | 中等 | https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/ |
+| 1123. 最深叶节点的最近公共祖先 | 中等 | https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves |
 
 > Array2ListNode 数组转链表
 
