@@ -22,6 +22,7 @@
 |         1. 两数之和          | 简单 |                                                                       |
 |  26. 删除有序数组中的重复项  | 简单 | https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ |
 |         27. 移除元素         | 简单 |           https://leetcode-cn.com/problems/remove-element/            |
+| 34. 在排序数组中查找元素的第一个和最后一个位置 | 中等 | https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/ |
 |         61. 旋转链表         | 中等 |           https://leetcode.cn/problems/rotate-list/                   |
 |     88. 合并两个有序数组     | 简单  |      https://leetcode.cn/problems/merge-sorted-array/                 |
 |        92. 反转链表 2        |      |                                                                       |
@@ -39,7 +40,26 @@
 |      1603. 设计停车系统      |      |                                                                       |
 |     1768. 交替合并字符串     | 简单 |        https://leetcode.cn/problems/merge-strings-alternately/        |
 |    1822. 数组元素积的符号    | 简单 |     https://leetcode.cn/problems/sign-of-the-product-of-an-array/     |
+|    2594. 修车的最少时间      | 中等 |      https://leetcode.cn/problems/minimum-time-to-repair-cars/      |
 
 > Array2ListNode 数组转链表
 
 > Sort 排序
+
+# windows环境配置
+
+## VSCode
+### LeetCode插件
+
+```json
+  "leetcode.filePath": {
+    "default": {
+      "folder": "",
+      "filename": "${id}.${ext}"	//默认有中文名，无法在vscode中debug，所以删除中文，只保留题目序号
+    }
+  },
+```
+
+### Code Runner
+
+不好使。
