@@ -41,6 +41,7 @@
 |     1768. 交替合并字符串     | 简单 |        https://leetcode.cn/problems/merge-strings-alternately/        |
 |    1822. 数组元素积的符号    | 简单 |     https://leetcode.cn/problems/sign-of-the-product-of-an-array/     |
 |    2594. 修车的最少时间      | 中等 |      https://leetcode.cn/problems/minimum-time-to-repair-cars/      |
+|    2651. 计算列车到站时间    | 简单 |      https://leetcode.cn/problems/calculate-delayed-arrival-time/      |
 
 > Array2ListNode 数组转链表
 
